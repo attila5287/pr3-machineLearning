@@ -8,7 +8,7 @@ def index():
 
 
 @app.route('/main')
-def simulator(foo):
+def simulator():
     return render_template('main.html')
 
 if __name__ == '__main__':
