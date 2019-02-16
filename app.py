@@ -7,10 +7,9 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/main')
+@app.route('/test')
 def simulator():
-    return render_template('main.html')
+    return render_template('test.html')
 
 if __name__ == '__main__':
   app.run(debug=True)
- 
