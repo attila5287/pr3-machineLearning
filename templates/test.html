@@ -117,7 +117,28 @@
     <br>
     <!-- LOGO END -->
 
+    <div class="row">
+        <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
+        {% for item in inventory %}
 
+        <div class="col-4">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem; "><i class="favicon" aria-hidden="true" src="favicon.ico"></i>
+                <div class="card-header">{{item.cityJob}}</div>
+                <div class="card-body" style="background-color: #bb7dee">
+                    <h4 class="card-title">{{ item.Title }}</h4>
+                    <p class="card-text">{{ item.Description}}</p>
+                </div>
+                <div class="card-footer">
+                    {{item.Company}}
+                </div>
+                <a href="{{item.URLs}}" class="badge badge-secondary">apply</a>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+    </div>
 
 
 
