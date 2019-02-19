@@ -1,7 +1,7 @@
 import pandas as pd
 from flask import Flask, render_template
 from flask_pymongo import PyMongo
-from dataImport import testURLS
+import json
 
 # create instance of Flask app
 app = Flask(__name__)
@@ -21,13 +21,15 @@ def index():
 @app.route('/test')
 def simulator():
   # test data for colorado one bedroom
-  inventoryDemo=pd.read_csv("https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/testData.csv", encoding='ISO-8859-1')
+  readDataRaw_df=pd.read_csv("https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/testData.csv", encoding='ISO-8859-1')
 
-  invenDemo = inventoryDemo.copy()
+  dictBeforeMongo = readDataRaw_df.to_dict('records')
+  mongo.db.collection.drop()
+  mongo.db.collection.insert_many(dictBeforeMongo)
+  inventory = list(mongo.db.collection.find())
 
-  print(type(invenDemo))
 
-  return render_template('test.html', inventoryDemo=invenDemo)
+  return render_template('test.html', inventory=inventory)
   
 
 

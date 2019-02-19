@@ -57,20 +57,20 @@
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-itemDemo active">
+                <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-itemDemo">
+                <li class="nav-item">
                     <a class="nav-link" href="/data">
                         API / DATA 
                     </a>
                 </li>
-                <li class="nav-itemDemo">
+                <li class="nav-item">
                     <a class="nav-link" href="https://github.com/attila5287/pr3-machineLearning">
                         GITHUB / CODE
                     </a>
                 </li>
-                <li class="nav-itemDemo">
+                <li class="nav-item">
                     <a class="nav-link" href="https://github.com/attila5287/pr3-RegroPoly-assets-herokuAPP">
                          GITHUB / ASSETS
                     </a>
@@ -87,7 +87,7 @@
         </div>
     </nav>
     <ul class="nav justify-content-center" style="background-color: #fa811d">
-        <li class="nav-itemDemo">
+        <li class="nav-item">
             <a class="nav-link disabled" href="#">
                 <h5>
                     <i class="fa fa-battery" aria-hidden="true" style="color:rgb(255, 255, 255)"></i>
@@ -119,25 +119,25 @@
 
     <div class="row">
         <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
-        {% for itemDemo in inventoryDemo %}
+        {% for item in inventoryDemo %}
 
         <div class="col-4">
             <div class="card text-white bg-dark mb-1" style="max-width: 18rem; "><i class="favicon" aria-hidden="true" src="favicon.ico"></i>
                 <div class="card-header">
-                    <!-- {{itemDemo}} -->
+                    <!-- {{item}} -->
                 </div>
                 <div class="card-body" style="background-color: #57a8bd">
                     <h6 class="card-title"><i>
                         ONE BEDROOM DEMO</i>
                     </h6>
 
-                    <img src="{{itemDemo}}" class="img-thumbnail" alt="Responsive image">
+                    <img src="{{item}}" class="img-thumbnail" alt="Responsive image">
 
                     <i class="card-text"> This gorgeous and nearly perfect house will stun you with its modern and dazzling interior finishes.
                     </i>
                 </div>
                 <div class="card-footer">
-                    <!-- {{itemDemo.itemPrice}} -->
+                    <!-- {{item.itemPrice}} -->
                 </div>
             </div>
         </div>
@@ -146,51 +146,78 @@
 
     </div>
 
-    <div class="row">
+    <div class="container">
         <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
-        {% for itemDemo in inventoryDemo %}
-
-        <div class="col-4">
-            <div class="card text-white bg-dark mb-1" style="max-width: 18rem; "><i class="favicon" aria-hidden="true" src="favicon.ico"></i>
-                <div class="card-header">{{itemDemo.State}}</div>
-                <div class="card-body" style="background-color: #bb7dee">
-                    <h4 class="card-title">{{ itemDemo.Type }}</h4>
-                    <p class="card-text">{{ itemDemo.Description}}</p>
+        <div class="row">
+            {% for item in inventory %}
+            <div class="col-3">
+                <div class="card text-white bg-dark mb-1" style="max-width: 18rem;"><i class="favicon" aria-hidden="true" src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regropoly_ICO.ico"></i>
+                    <div class="card-header">{{item.State}}</div>
+                    <div class="card-body" style="background-color: #57a8bd">
+                        <h6 class="card-title">{{item.itemDesc}}</h6>
+                        <img src={{item.itemIconURL}} class="img-thumbnail" alt="Responsive image">
+                        <p class="card-text">{{ item.Type}}</p>
+                    </div>
+                    <div class="card-footer">
+                        {{item.itemPriceF}}
+                    </div>
                 </div>
-                <div class="card-footer">
-                    {{itemDemo.itemPrice}}
+            </div>
+            <div class="col-3">
+                <table class="table table-sm table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">RegModel</th>
+                            <th scope="col">oneYr</th>
+                            <th scope="col">twoYr</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Poly-2nd</th>
+                            <td>{{item.regPol2F}}</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">LinST</th>
+                            <td>{{item.regLinFitF}}</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">LinLT</th>
+                            <td>{{item.regLinFreeF}}</td>
+                            <td>...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        </div><br>
+
+
+
+
+
+
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <div class="alert-primary ">col
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="alert-primary ">col</div>
                 </div>
             </div>
         </div>
 
-        {% endfor %}
-
-    </div>
 
 
-
-
-
-
-    <div class="container ">
-        <div class="row ">
-            <div class="col-md-6 ">
-                <div class="alert-primary ">col
-                </div>
-            </div>
-            <div class="col-md-6 ">
-                <div class="alert-primary ">col</div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
 </body>
 
 </html>
