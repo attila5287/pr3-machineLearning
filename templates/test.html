@@ -57,29 +57,29 @@
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
+                <li class="nav-itemDemo active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-itemDemo">
                     <a class="nav-link" href="/data">
                         API / DATA 
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-itemDemo">
                     <a class="nav-link" href="https://github.com/attila5287/pr3-machineLearning">
                         GITHUB / CODE
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-itemDemo">
                     <a class="nav-link" href="https://github.com/attila5287/pr3-RegroPoly-assets-herokuAPP">
                          GITHUB / ASSETS
                     </a>
                 </li>
             </ul>
-            <form class="form-inline my-0 my-lg-0 mt-2 p-2">
-                <div class="btn btn-primary p-3 mb-2" href="#" role="button">
+            <form class="form-inline my-0 my-lg-0 mt-0 p-1">
+                <div class="btn btn-primary p-1 mb-0" href="#" role="button">
                     <h4>
-                        <i class="fas fa-home">Play</i>
+                        <i class="fas fa-home m-1">Play</i>
                     </h4>
                 </div>
 
@@ -87,11 +87,11 @@
         </div>
     </nav>
     <ul class="nav justify-content-center" style="background-color: #fa811d">
-        <li class="nav-item">
+        <li class="nav-itemDemo">
             <a class="nav-link disabled" href="#">
                 <h5>
                     <i class="fa fa-battery" aria-hidden="true" style="color:rgb(255, 255, 255)"></i>
-                    <i> Full-Stack Web App | ATTILA5287</i>
+                    <i> Full-Stack Web App | @attila5287</i>
                 </h5>
             </a>
 
@@ -119,62 +119,58 @@
 
     <div class="row">
         <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
-        {% for item in inventory %}
+        {% for itemDemo in inventoryDemo %}
 
         <div class="col-4">
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem; "><i class="favicon" aria-hidden="true" src="favicon.ico"></i>
-                <div class="card-header">{{item.cityJob}}</div>
-                <div class="card-body" style="background-color: #bb7dee">
-                    <h4 class="card-title">{{ item.Title }}</h4>
-                    <p class="card-text">{{ item.Description}}</p>
+            <div class="card text-white bg-dark mb-1" style="max-width: 18rem; "><i class="favicon" aria-hidden="true" src="favicon.ico"></i>
+                <div class="card-header">
+                    <!-- {{itemDemo}} -->
+                </div>
+                <div class="card-body" style="background-color: #57a8bd">
+                    <h6 class="card-title"><i>
+                        ONE BEDROOM DEMO</i>
+                    </h6>
+
+                    <img src="{{itemDemo}}" class="img-thumbnail" alt="Responsive image">
+
+                    <i class="card-text"> This gorgeous and nearly perfect house will stun you with its modern and dazzling interior finishes.
+                    </i>
                 </div>
                 <div class="card-footer">
-                    {{item.Company}}
+                    <!-- {{itemDemo.itemPrice}} -->
                 </div>
-                <a href="{{item.URLs}}" class="badge badge-secondary">apply</a>
             </div>
         </div>
 
         {% endfor %}
 
     </div>
-    </div>
 
+    <div class="row">
+        <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
+        {% for itemDemo in inventoryDemo %}
 
-
-
-
-    <div class="container ">
-        <div class="row ">
-            <div class="col-md-6 ">
-                <div class="row">
-                    <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
-                    {% for item in inventory %}
-
-                    <div class="col-4">
-                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem; "><i class="favicon" aria-hidden="true" src="favicon.ico"></i>
-                            <div class="card-header">{{item.cityJob}}</div>
-                            <div class="card-body" style="background-color: #bb7dee">
-                                <h4 class="card-title">{{ item.Title }}</h4>
-                                <p class="card-text">{{ item.Description}}</p>
-                            </div>
-                            <div class="card-footer">
-                                {{item.Company}}
-                            </div>
-                            <a href="{{item.URLs}}" class="badge badge-secondary">apply</a>
-                        </div>
-                    </div>
-
-                    {% endfor %}
-
+        <div class="col-4">
+            <div class="card text-white bg-dark mb-1" style="max-width: 18rem; "><i class="favicon" aria-hidden="true" src="favicon.ico"></i>
+                <div class="card-header">{{itemDemo.State}}</div>
+                <div class="card-body" style="background-color: #bb7dee">
+                    <h4 class="card-title">{{ itemDemo.Type }}</h4>
+                    <p class="card-text">{{ itemDemo.Description}}</p>
+                </div>
+                <div class="card-footer">
+                    {{itemDemo.itemPrice}}
                 </div>
             </div>
         </div>
-        <div class="col-md-6 ">
-            <div class="alert-primary ">col</div>
-        </div>
+
+        {% endfor %}
+
     </div>
-    </div><br>
+
+
+
+
+
 
     <div class="container ">
         <div class="row ">
