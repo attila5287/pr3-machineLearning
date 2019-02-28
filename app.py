@@ -4,6 +4,7 @@ from flask_pymongo import PyMongo
 import json
 import jinja2
 app = Flask(__name__)
+app.jinja_env.filters['zip'] = zip
 # create instance of Flask app
 mongo_uri = 'mongodb://heroku_x58zdhbn:fb7o0k7stbsk0ivbirarr2i2d3@ds139775.mlab.com:39775/heroku_x58zdhbn'
 app.config['MONGO_URI'] = mongo_uri
@@ -44,7 +45,9 @@ def index():
   'Macro-econ: Pair Plot for House Prices vs Customer Rent Index'
   ]
 
-  return render_template('index.html',figureList=figureL2st, descList=figureL3st)
+
+
+  return render_template('index.html',figureList = figureL1st, descList = figureL3st)
 
 
 @app.route('/test') 
