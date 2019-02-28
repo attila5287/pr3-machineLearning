@@ -93,7 +93,7 @@
             </form>
         </div>
     </nav>
-    <ul class="nav justify-content-center" style="background-color: #fa811d">
+    <ul class="nav justify-content-center" style="background-color: #fda45b">
         <li class="nav-item">
             <a class="nav-link disabled" href="#">
                 <h5>
@@ -107,69 +107,142 @@
         </li>
     </ul>
     <br>
-    <div class="btn btn-primary p-1">
-        <a href="/test" class="btn-link">test</a>
-    </div>
-
+    <!--------------- 1 MOD CONTAINER------------ -->
+    <br>
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <div class="alert alert-success" role="alert">
-                    <a href="/test" class="alert-link">TEST</a>
+            <div class="col-sm-12">
+                <div class="alert alert-success" role="alert" align="center">
+                    <b>* * * 0.DATA EXPLORATION * * * </b>
                 </div>
-                <div class="alert alert-success" role="alert">
-                    <a href="/housemarket" class="alert-link">play>ROUND-0>HOUSE-MARKET</a>
-                </div>
+                <p align="center">
+                    Welcome to RegroPoly! <br> Attila Turkoz | University of Denver Coding/Data Analytics Bootcamp 2018-2019
+                </p>
             </div>
-
         </div>
 
-    </div>
+        <div class="row">
+            <!-- first box from left -->
+            <div class="col-sm-3">
+                <li class="list-group-item list-group-item-success">
+                    <h4>
+                        HouseMarket
+                    </h4>
+                </li>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/assetsIcon02.png" alt="">
+                    <div class="card-body">
+                        <ul style="list-style-type:circle">
+                            <li>Collect user preferences with a form element</li>
+                            <li>Run the next module with job title/city
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <li class="list-group-item list-group-item-success">
+                    <h4>
+                        Assets
+                    </h4>
+                </li>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/assetsIcon03.png">
+                    <div class="card-body">
+                        <ul style="list-style-type:circle">
+                            <li>Collect user preferences with a form element</li>
+                            <li>Run the next module with job title/city
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <li class="list-group-item list-group-item-success">
+                    <h4>
+                        Test
+                    </h4>
+                </li>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/testIcon02.png" alt="">
+                    <div class="card-body">
+                        <ul style="list-style-type:circle">
+                            <li>Collect user preferences with a form element</li>
+                            <li>Run the next module with job title/city
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        a Machine Learning project aimed to introduce ML models to real estate operations
+                    </li>
+                    <li class="list-group-item">
+                        data sets obtained from ZILLOW 1996-2019 monthly time series for state and metro
+                    </li>
+                    <li class="list-group-item">
+                        also from FED for macro-economic variables
+                    </li>
+                    <li class="list-group-item">
+                        <button type="button" name="" id="" class="btn btn-success" btn-lg btn-block "></button>
+                    </li><li class="list-group-item ">
+
+
+                </ul>
+
+            </div>
+        </div>
+    </div><br>
+    <!-- ------------END OF MOD CONTAINER ------->
 
 
 
-    <!--------------- 0 LOGO W/O WELCOME ---------- -->
-    <div class="container">
+
+    <!--------------- 0 REGROPOLY LOGO W/O WELCOME ---------- -->
+    <div class="container ">
         <div class="row ">
             <div class="col-12 ">
                 <div class="d-flex justify-content-center ">
-                    <img src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regroPoly_newLogo_Mx.png">
+                    <img src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regroPoly_newLogo_Mx.png ">
                 </div>
             </div>
         </div>
     </div>
     <br>
-    <!-- LOGO END -->
-
-
-
-
-
-
+    <br>
+    <!-- REGROPOLY LOGO END -->
 
     <div class="container ">
         <div class="row ">
-            <div class="col-md-6 ">
+            <div class="col-sm-4 ">
+                {% for description in descList %}
+                <div class="d-flex justify-content-center ">
+                    <div class="alert-primary ">
+                        <p>{{ description }}</p>
+                    </div>
+                </div>
+                <br> {% endfor %}
+            </div>
 
-            </div>
-            <div class="col-md-6 ">
-                <div class="alert-primary ">col</div>
-            </div>
+            <div class="col-sm-8 ">
+                {% for figure in figureList %}
+                <div class="d-flex justify-content-center ">
+                    <img src="{{figure}} ">
+                </div><br> {% endfor %}
+            </div><br>
         </div>
     </div><br>
-
-    <div class="container ">
-        <div class="row ">
-            <div class="col-md-6 ">
-                <div class="alert-primary ">col
-                </div>
-            </div>
-            <div class="col-md-6 ">
-                <div class="alert-primary ">col</div>
-            </div>
-        </div>
-    </div>
-
 
 
     <!-- Optional JavaScript -->

@@ -1,3 +1,8 @@
 {
-    "python.pythonPath": "C:\\Users\\DENVER\\.conda\\envs\\her0ku_env\\python.exe"
+    "python.pythonPath": "C:\\Users\\DENVER\\.conda\\envs\\her0ku_env\\python.exe",
+    "html.format.enable": false,
+    "html.autoClosingTags": false,
+    "html.format.preserveNewLines": false,
+    "html.suggest.html5": false,
+    "workbench.colorTheme": "Dark (Molokai)"
 }
