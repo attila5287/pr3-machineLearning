@@ -1,0 +1,9 @@
+#data | fileName (all files are .csv and monthly)
+#----------------------------------------------------------------
+Unemployment Rate: 20 years and over (LNS14000024) 
+Median Family Income in the United States (MEFAINUSA646N) 
+Consumer Price Index for All Urban Consumers: All Items (CPIAUCSL) 
+15-Year Fixed Rate Mortgage Average in the United States (MORTGAGE15US)
+30-Year Fixed Rate Mortgage Average in the United States (MORTGAGE30US) 
+Civilian Unemployment Rate (UNRATE) 
+Consumer Price Index for All Urban Consumers: Rent of primary residence (CUUR0000SEHA) 

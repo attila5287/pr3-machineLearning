@@ -4,7 +4,7 @@
 
 <head>
     <title>
-        RegroPoly | Welcome
+        RegroPoly | Marketplace
     </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -72,7 +72,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/attila5287/pr3-RegroPoly-assets-herokuAPP">
-                         GITHUB / ASSETS
+                         GITHUB / RESOURCES
                     </a>
                 </li>
             </ul>
@@ -117,74 +117,46 @@
     <br>
     <!-- LOGO END -->
 
-    <div class="row">
-        <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
-        {% for item in inventoryDemo %}
-
-        <div class="col-4">
-            <div class="card text-white bg-dark mb-1" style="max-width: 18rem; "><i class="favicon" aria-hidden="true" src="favicon.ico"></i>
-                <div class="card-header">
-                    <!-- {{item}} -->
-                </div>
-                <div class="card-body" style="background-color: #57a8bd">
-                    <h6 class="card-title"><i>
-                        ONE BEDROOM DEMO</i>
-                    </h6>
-
-                    <img src="{{item}}" class="img-thumbnail" alt="Responsive image">
-
-                    <i class="card-text"> This gorgeous and nearly perfect house will stun you with its modern and dazzling interior finishes.
-                    </i>
-                </div>
-                <div class="card-footer">
-                    <!-- {{item.itemPrice}} -->
-                </div>
-            </div>
-        </div>
-
-        {% endfor %}
-
-    </div>
 
     <div class="container">
         <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
         <div class="row">
             {% for item in inventory %}
-            <div class="col-3">
-                <div class="card text-white bg-dark mb-1" style="max-width: 18rem;"><i class="favicon" aria-hidden="true" src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regropoly_ICO.ico"></i>
-                    <div class="card-header">{{item.State}}</div>
-                    <div class="card-body" style="background-color: #57a8bd">
-                        <h6 class="card-title">{{item.itemDesc}}</h6>
+            <div class="col-xs-8">
+                <div class=" card text-white bg-dark mb-1 " style="max-width: 18rem; "><i class="favicon " aria-hidden="true " src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regropoly_ICO.ico "></i>
+                    <div class="card-header ">{{item.State}}</div>
+                    <div class="card-body " style="background-color: #57a8bd ">
+                        <h6 class="card-title ">{{item.itemDesc}}</h6>
                         <img src={{item.itemIconURL}} class="img-thumbnail" alt="Responsive image">
-                        <p class="card-text">{{ item.Type}}</p>
+                        <p class="card-text ">{{ item.Type}}</p>
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer ">
                         {{item.itemPriceF}}
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <table class="table table-sm table-dark">
+            <div class="col-xs-3 ">
+                <table class="table table-sm table-dark ">
                     <thead>
                         <tr>
-                            <th scope="col">RegModel</th>
-                            <th scope="col">oneYr</th>
-                            <th scope="col">twoYr</th>
+                            <th scope="col ">RegModel</th>
+                            <th scope="col ">oneYr</th>
+                            <th scope="col ">twoYr</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Poly-2nd</th>
+                            <th scope="row ">Poly-2nd</th>
                             <td>{{item.regPol2F}}</td>
                             <td>...</td>
                         </tr>
                         <tr>
-                            <th scope="row">LinST</th>
+                            <th scope="row ">LinST</th>
                             <td>{{item.regLinFitF}}</td>
                             <td>...</td>
                         </tr>
                         <tr>
-                            <th scope="row">LinLT</th>
+                            <th scope="row ">LinLT</th>
                             <td>{{item.regLinFreeF}}</td>
                             <td>...</td>
                         </tr>
