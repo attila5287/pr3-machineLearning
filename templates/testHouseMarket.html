@@ -163,11 +163,13 @@
                                     </div>
                                 </div>    
                                 <img src={{item.itemIconURL}} class="img-thumbnail " alt="Responsive image " size="max-width:20% ">
-                                <p class="card-text text-white ">Description: </p>
+                                <p class="card-text text-white ">Description: {{item.itemDesc}}
+
+                                </p>
                             </div>
                             <div class="col-sm-6 ">
                                 <ul class="list-group ">
-                                    <li class="list-group-item list-group-item-light "> State: </li>
+                                    <li class="list-group-item list-group-item-light "> State:{{itemState}}</li>
                                     <li class="list-group-item list-group-item-info ">Purchase Price:</li>
                                     <li class="list-group-item list-group-item-light ">Purchase Round:</li>
                                     <li class="list-group-item list-group-item-info ">Return</li>
@@ -188,8 +190,12 @@
             <div class="col-sm-4 ">
                 <div class="card ">
                         <div class="card-body ">
-                        <h4 class="card-title ">Title</h4>
-                        <p class="card-text ">Text</p>
+                            <h5 class="card-title ">Prediction for Current</h5>
+                            <p class="card-text ">item.card1PredictF</p>
+                            <h5 class="card-title ">Forecast Next Round</h5>
+                            <p class="card-text ">item.card1ForecastNextF</p>
+                            <h5 class="card-title ">Forecast Next+Next Round</h5>
+                            <p class="card-text ">item.card2ForecastNextNxtF</p>
                     </div>
                 </div>    
             
@@ -198,22 +204,32 @@
         <br>    
         <div class="row ">
             <div class="col-sm-4 ">
-                    card1PredictF
-                    card1ForecastNextF
-                    card1ForecastNextNxtF
-                    card2PredictF
-                    card2ForecastNextF
-                    card2ForecastNextNxtF
-                    card3PredictF
-                    card3ForecastNextF
-                    card3ForecastNextNxtF
-                    card4PredictF
-                    card4ForecastNextF
-                    card4ForecastNextNxtF
-                    
+                <div class="card-body ">
+                        <h5 class="card-title ">Prediction for Current</h5>
+                        <p class="card-text ">item.card2PredictF</p>
+                        <h5 class="card-title ">Forecast Next Round</h5>
+                        <p class="card-text ">item.card2ForecastNextF</p>
+                        <h5 class="card-title ">Forecast Next+Next Round</h5>
+                        <p class="card-text ">item.card2ForecastNextNxtF</p>
+                </div>
             </div>
-            <div class="col-sm-4 ">2-2</div>
-            <div class="col-sm-4 ">2-3</div>
+            <div class="col-sm-4 ">
+                    <h5 class="card-title ">Prediction for Current</h5>
+                    <p class="card-text ">item.card3PredictF</p>
+                    <h5 class="card-title ">Forecast Next Round</h5>
+                    <p class="card-text ">item.card3ForecastNextF</p>
+                    <h5 class="card-title ">Forecast Next+Next Round</h5>
+                    <p class="card-text ">item.card3ForecastNextNxtF</p>
+            </div>
+            <div class="col-sm-4 ">
+                    <h5 class="card-title ">Prediction for Current</h5>
+                    <p class="card-text ">item.card4PredictF</p>
+                    <h5 class="card-title ">Forecast Next Round</h5>
+                    <p class="card-text ">item.card4ForecastNextF</p>
+                    <h5 class="card-title ">Forecast Next+Next Round</h5>
+                    <p class="card-text ">item.card4ForecastNextNxtF</p>
+
+            </div>
         </div>
     </div>
     {% endfor %}
