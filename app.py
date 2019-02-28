@@ -47,7 +47,7 @@ def index():
 
 
 
-  return render_template('index.html',figureList = figureL1st, descList = figureL3st)
+  return render_template('index.html',figureList =figureL2st, descList = figureL3st)
 
 
 @app.route('/test') 

@@ -230,17 +230,18 @@
                 <div class="d-flex justify-content-center ">
                     <div class="alert-primary p-4 mb-4 ">
                         <p>{{description }}</p>
-                    </div>{% endfor %}
+                    </div>
                 </div>
+                {% endfor %}
                 <br> 
             </div>
 
             <div class="col-sm-10 ">{% for figure in figureList %}
                 <div class="d-flex justify-content-center ">
-                    <img src={{ figure }}>
-                </div><br> {% endfor %}
-            </div><br>
+                    <img src="{{ figure }} "">
+            </div> {% endfor %}
         </div>
+    </div>
     </div><br>
 
 
