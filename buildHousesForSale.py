@@ -17,7 +17,7 @@ def buildTenHouses():
         newlittleHouse = None
         newlittleHouse = Item()
         tenLittleHouses.append(newlittleHouse)
-        print('>                 generating ' + str(n) + ' out of 10 ')
+        print('>                 generating ' + str(n+1) + ' out of 10 ')
         newlittleHouse.display()
     print(" - - - - - - - - - - - - - - - - - - - ")
     # returns an iterable for web display jinja2 temp engine compatible
