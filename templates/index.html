@@ -9,7 +9,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="mask-icon" href="https://image.flaticon.com/icons/svg/1353/1353414.svg" color="#000000">
     <link rel="icon" type="image/x-icon" class="favicon" href="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regropoly_ICO_org.ico">
     <!-- Bootstrap CSS -->
 
@@ -19,34 +18,36 @@
     <style>
     p {
             font-family: monospace;
-            font-size: 20px;
-            color: #d16105;
+            color: #fa811d;
             font-weight: 500;
+        }
+        
+        h4 {
+            font-family: monospace;
         }
         
         i {
             font-family: monospace;
-            color: #ffffff;
             font-weight: 500;
+            font-size: 20px
         }
         
         div.alert-primary {
             background-color: rgb(252, 216, 150);
         }
         
-        div.btn-primary {
+        .btn-primary {
             background-color: orange;
         }
         
         div.container {
             padding: 4px;
-            border: 1.50px dashed #fa811d
+            border: 1.50px dashed #fa811d;
         }
         
-        div.badge-primary {
-            padding: 2;
-            background-color: orange;
-            border: 2px solid #ffffff
+        li {
+            list-style: circle;
+            padding: 4px;
         }
     }
     </style>
@@ -123,10 +124,14 @@
 
         <div class="row">
             <!-- first box from left -->
-            <div class="col-sm-3">
+            <div class="col-md-4">
                 <li class="list-group-item list-group-item-success">
                     <h4>HouseMarket</h4>
-                    <button type="link" class="btn btn-warning" href="/housemarket">Buy!</button>
+                    <a href="test/ten" class="btn btn-primary" role="button">
+                        <i>
+                            go buy house!
+                        </i>
+                    </a>
                 </li>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -142,12 +147,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-md-4">
                 <li class="list-group-item list-group-item-success">
                     <h4>
-                        Assets
+                        Active Assets
                     </h4>
-                    <button type="link" class="btn btn-warning" href='/assets'>Sell!</button>
+                    <a href="/assets" class="btn btn-primary" role="button">
+                        <i>
+                        items in hand
+                        </i>
+                    </a>
                 </li>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -162,12 +171,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-md-4">
                 <li class="list-group-item list-group-item-success">
                     <h4>
                         Admin only
                     </h4>
-                    <button type="link" class="btn btn-warning" href="/housemarket">Test!</button>
+                    <a href="/housemarket" class="btn btn-primary" role="button">
+                        <i>
+                            test ML-models
+                        </i>
+                    </a>
                 </li>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -183,16 +196,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-md-12">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                    <li class="list-group-item-success p-4">
                         a Machine Learning project aimed to introduce ML models to real estate operations
                     </li>
-                    <li class="list-group-item">
-                        data sets obtained from ZILLOW 1996-2019 monthly time series for state and metro
+                    <li class="list-group-item-light p-4">
+                        Market price strategy of the game built on REAL data sets obtained from ZILLOW 1996-2019
                     </li>
-                    <li class="list-group-item">
-                        also from FED for macro-economic variables
+                    <li class="list-group-item-success p-4">
+                        Macro-economic parameters for price prediction calculated using REAL data-sets obtained from FED
                     </li>
                 </ul>
 
@@ -220,7 +233,7 @@
 
     <div class="container ">
         <div class="row ">
-            <div class="col-sm-3 ">
+            <div class="col-md-4 ">
                 {% for description in descList %}
                 <div class="d-flex justify-content-center ">
                     <div class="alert-primary p-2 mt-4 mb-4 ">
@@ -231,7 +244,7 @@
                 <br>
             </div>
 
-            <div class="col-sm-9 ">{% for figure in figureList %}
+            <div class="col-md-8 ">{% for figure in figureList %}
                 <div class="d-flex justify-content-center ">
                     <img src="{{ figure }} " ">
             </div> {% endfor %}

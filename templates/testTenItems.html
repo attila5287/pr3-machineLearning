@@ -4,7 +4,7 @@
 
 <head>
     <title>
-        RegroPoly | HouseMarket
+        RegroPoly | Test Ten Items
     </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="https://image.flaticon.com/icons/svg/1353/1353414.svg" color="#000000">
     <link rel="icon" type="image/x-icon" class="favicon" href="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regropoly_ICO_org.ico">
     <!-- Bootstrap CSS -->
-    <link rel="shortcut icon" href="" https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regropoly_ICO_org.ico " type="image/x-icon ">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regropoly_ICO_org.ico" type="image/x-icon ">
     <link rel="stylesheet " href="https://use.fontawesome.com/releases/v5.7.2/css/all.css " integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr " crossorigin="anonymous ">
     <link rel="stylesheet " href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css " integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO " crossorigin="anonymous ">
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
@@ -23,13 +23,15 @@
             color: #fa811d;
             font-weight: 500;
         }
-        h4{
+        
+        h4 {
             font-family: monospace;
-        }        
+        }
+        
         i {
             font-family: monospace;
-            font-weight:500;
-            font-size: 20px
+            font-weight: 500;
+            font-size: 20px;
         }
         
         div.alert-primary {
@@ -44,11 +46,10 @@
             padding: 4px;
             border: 1.50px dashed #fa811d;
         }
-        li{
-            list-style:circle ;
-            padding: 4px;
+        
+        li {
+            padding: 1px;
         }
-
     }
     </style>
 
@@ -124,7 +125,7 @@
     </div>
     <br>
     <!-- LOGO END -->
-<!-- =========================================== -->
+    <!-- =========================================== -->
 
 
     <div class="container ">
@@ -140,86 +141,88 @@
             </div>
             <div class="col-sm-4 ">
                 <div class="jumbotron ">
-                        <br>
-                    <a class="btn btn-light btn-lg mt-2 " href="/test/ten " role="button " >
+                    <a class="btn btn-light btn-md mt-2 " href="/test/ten " role="button ">
                         <img class="img-thumbnail " src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regroPoly_newLogo.ico " alt=" ">
                         <h6>ROUND++</h6>
                     </a>
-                    </p>
                 </div>
             </div>
         </div>
     </div>
 
-    
+
     <div class="container ">
         <div class="row ">
             {% for item in itemList %}
-                <div class="col-md-6 ">
-                    <div class="card text-white bg-info mb-3 ">
-                        <div class="card-header ">Round No: TEST-ROUND-ZERO
-                        </div>
-                        <div class="card-body ">
-                            <div class="row ">
-                                <div class="col-sm-6 ">
-                                    <div class="alert alert-primary " role="alert ">
-                                        <h5><p>Buy this house!:</p></h5>
-                                        <div class="btn btn-warning mb-1 p-2 " role="button ">
-                                            <h3>
-                                                <i>
+            <div class="col-md-6 ">
+                <div class="card text-white bg-info mb-3 ">
+                    <div class="card-header ">Round No: TEST-ROUND-ZERO
+                    </div>
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-sm-6 ">
+                                <div class="alert alert-light " role="alert ">
+                                    <h5>
+                                        <p>Buy this house!:</p>
+                                    </h5>
+                                    <div class="btn btn-warning mb-1 p-2 " role="button ">
+                                        <h2>
+                                            <i>
                                                     {{ "${:,.0f} ".format(item.itemBasePrice) }}
                                                 </i>
-                                            </h3>    
-                                        </div>
-                                    </div>    
-                                    <img src='{{item.itemIconNo}}' class="img-thumbnail " alt="Responsive image " size="max-width:20% ">
-                                </div>
-                                <div class="col-sm-6 ">
-                                    <ul class="list-group ">
-                                        <li><i>ItemState</i></li>
-                                        <li class="list-group-item list-group-item-light "> 
-                                        {{item.itemState}}
-                                        </li>
-                                        <li><i>ItemType</i></li>
-                                        <li class="list-group-item list-group-item-info ">
-                                        {{item.itemType}}
-                                        </li>
-                                        <li><i>ItemID</i></li>
-                                        <li class="list-group-item list-group-item-light ">
-                                        {{item.itemID}}
-                                        </li>
-                                        <li><i>itemPriceLabel</i></li>
-                                        <li class="list-group-item list-group-item-info ">
-                                        {{item.priceIndexLabel}}
-                                        </li>
-                                        <li><i>itemBasePrice</i></li>
-                                        <li class="list-group-item list-group-item-light ">
-                                        {{ "${:,.0f} ".format(item.itemBasePrice) }}
-                                        </li>
-                                        <!-- <li class="list-group-item list-group-item-info "></li> -->
-                                    </ul>
-                                </div>
-                            </div><br>
-                            <div class="row ">
-                                <li><i> itemTitle: </i>
-                                    <div class="alert alert-primary ">
-                                        <h4>{{ item.itemTitle }} </h4>
+                                        </h2>
                                     </div>
-                                </li>
-                                <li>
-                                    <i>itemDesc: </i><br>
-                                    <i class="p-2 mb-0 " style="font-size: 16px ">{{ item.itemDesc}}</i>
-                                </li>    
+                                </div>
+                                <img src='{{item.itemIconNo}}' class="img-thumbnail " alt="Responsive image " size="max-width:20% ">
                             </div>
-                            <br>
+                            <div class="col-sm-6 ">
+                                <ul class="list-group ">
+                                    <li><i>ItemState</i></li>
+                                    <li class="list-group-item list-group-item-light ">
+                                        {{item.itemState}}
+                                    </li>
+                                    <li><i>ItemType</i></li>
+                                    <li class="list-group-item list-group-item-info ">
+                                        {{item.itemType}}
+                                    </li>
+                                    <li><i>ItemID</i></li>
+                                    <li class="list-group-item list-group-item-light ">
+                                        {{item.itemID}}
+                                    </li>
+                                    <li><i>itemPriceLabel</i></li>
+                                    <li class="list-group-item list-group-item-info ">
+                                        {{item.priceIndexLabel}}
+                                    </li>
+                                    <li><i>itemBasePrice</i></li>
+                                    <li class="list-group-item list-group-item-light ">
+                                        {{ "${:,.0f} ".format(item.itemBasePrice) }}
+                                    </li>
+                                    <!-- <li class="list-group-item list-group-item-info "></li> -->
+                                </ul>
+                            </div>
                         </div><br>
-                    </div>
+                        <div class="row ">
+                            <li><i> itemTitle: </i>
+                                <div class="alert alert-primary ">
+                                    <h4>{{ item.itemTitle }} </h4>
+                                </div>
+                            </li>
+                            <li>
+                                <i>itemDesc: </i><br>
+                                <i class="p-2 mb-0 " style="font-size: 16px ">
+                                        {{ item.itemDesc}}
+                                    </i>
+                            </li>
+                        </div>
+                        <br>
+                    </div><br>
                 </div>
+            </div>
             {% endfor %}
         </div>
     </div>
     <br>
-    
+
 
 
     <!-- Optional JavaScript -->
@@ -227,7 +230,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
-    </body>
+</body>
 
 
 </html>

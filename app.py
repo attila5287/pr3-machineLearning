@@ -19,6 +19,7 @@ app.config['FLASK_DEBUG'] = flask_debug
 mongo = PyMongo(app,uri=mongo_uri)
 
 
+@app.route('/')
 @app.route('/intro')
 def index():
   pass
@@ -91,19 +92,7 @@ def houseForSale():
 
   return render_template('testHouseMarket.html', houseForSaleListing=listHouseProperties)
 
-
-@app.route('/test/cards') 
-def testCards():
-  pass
-  preIconSrc = 'https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/plot/'
-    
-  # listGithubRaw=
-
-
-  return render_template('testCards.html', houseIconList = listGithubRaw)
-  
 # ===============================
-@app.route('/')
 @app.route('/test/ten')
 def testTen():
   """"

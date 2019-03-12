@@ -3,7 +3,6 @@ from classItem import (
     Item
 )
 
-
 def buildTenHouses():
     """" GENERATES TEN CLS 'ITEM()' OBJECT AND STORES IN A LIST 
     TAKES NO ARGUMENTS, RETURNS AN ITERABLE OBJ(LIST) 
