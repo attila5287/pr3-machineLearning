@@ -3,6 +3,11 @@ from flask import Flask, render_template
 from flask_pymongo import PyMongo
 import json
 import jinja2
+from classItem import (Item)
+from buildHousesForSale import (buildTenHouses
+)
+
+
 app = Flask(__name__)
 app.jinja_env.filters['zip'] = zip
 # create instance of Flask app
@@ -14,7 +19,7 @@ app.config['FLASK_DEBUG'] = flask_debug
 mongo = PyMongo(app,uri=mongo_uri)
 
 
-@app.route('/')
+@app.route('/intro')
 def index():
   pass
   figureL2st=list()
@@ -34,16 +39,17 @@ def index():
     file = preFigureSrc + file
     figureL2st.append(file) 
 
-  figureL3st = ['Colorado all homes zillow actual prices, stars are Round Dates:Game Checkpoints',
-  'California all homes zillow actual prices, stars are Round Dates:Game Checkpoints', 
-  'Nebraska all homes zillow actual prices, stars are Round Dates:Game Checkpoints', 
-  'Macro-econ: Pair Plot for House Prices vs Customer Price Index',
-  'Macro-econ: Pair Plot for House Prices vs Median HouseHold Income',
-  'Macro-econ: Pair Plot for House Prices vs Unemployment Rate',
-  'Macro-econ: Pair Plot for House Prices vs Mortgage 15 yrs rate',
-  'Macro-econ: Pair Plot for House Prices vs Mortgage 30 yrs rate',
-  'Macro-econ: Pair Plot for House Prices vs Customer Rent Index'
-  ]
+  figureL3st = [
+    'Colorado all homes zillow actual prices, stars are Round Dates:Game Checkpoints',
+    'California all homes zillow actual prices, stars are Round Dates:Game Checkpoints', 
+    'Nebraska all homes zillow actual prices, stars are Round Dates:Game Checkpoints', 
+    'Consumer Price Index for All Urban Consumers: All Items (CPIAUCSL)',     
+    'Median Family Income in the United States (MEFAINUSA646N)',  
+    'Unemployment Rate: 20 years and over (LNS14000024)', 
+    '15-Year Fixed Rate Mortgage Average in the United States (MORTGAGE15US)',
+    '30-Year Fixed Rate Mortgage Average in the United States (MORTGAGE30US)',
+    'Rent/Consumer Price Index for All Urban Consumers: Rent of primary residence (CUUR0000SEHA)'
+    ]
 
 
 
@@ -83,10 +89,32 @@ def houseForSale():
   mongo.db.collectionHouseMarket.insert_many(dictHouseMarket)
   listHouseProperties = list(mongo.db.collectionHouseMarket.find())
 
-  return render_template('testHouseMarket.html',houseForSaleListing=listHouseProperties)
+  return render_template('testHouseMarket.html', houseForSaleListing=listHouseProperties)
+
+
+@app.route('/test/cards') 
+def testCards():
+  pass
+  preIconSrc = 'https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/plot/'
+    
+  # listGithubRaw=
+
+
+  return render_template('testCards.html', houseIconList = listGithubRaw)
+  
+# ===============================
+@app.route('/')
+@app.route('/test/ten')
+def testTen():
+  """"
+  GENERATES TEN RANDOM ITEMS (HOUSE-CONDOS) 
+  WITH FUNCTION buildTenHouses AND DISPLAYS WITH BOOTSTRAP
+  """
+  test_tenItems = buildTenHouses()
+  test_tenItems_list= list(test_tenItems)
+  return render_template('testTenItems.html', itemList = test_tenItems_list)
 
 
 if __name__ == '__main__':
   app.run(debug=True)
-
 

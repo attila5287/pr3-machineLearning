@@ -147,7 +147,7 @@
                     <h4>
                         Assets
                     </h4>
-                    <button type="link" class="btn btn-warning" href="/assets">Sell!</button>
+                    <button type="link" class="btn btn-warning" href='/assets'>Sell!</button>
                 </li>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -176,8 +176,8 @@
                     <img class="card-img-top" src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/testIcon02.png" alt="">
                     <div class="card-body">
                         <ul style="list-style-type:circle">
-                            <li>Collect user preferences with a form element</li>
-                            <li>Run the next module with job title/city
+                            <li>modules under development</li>
+                            <li>disabled
                             </li>
                         </ul>
                     </div>
@@ -194,11 +194,6 @@
                     <li class="list-group-item">
                         also from FED for macro-economic variables
                     </li>
-                    <li class="list-group-item">
-                        <button type="button" name="" id="" class="btn btn-success" btn-lg btn-block "></button>
-                    </li><li class="list-group-item ">
-
-
                 </ul>
 
             </div>
@@ -225,20 +220,20 @@
 
     <div class="container ">
         <div class="row ">
-            <div class="col-sm-2 ">
+            <div class="col-sm-3 ">
                 {% for description in descList %}
                 <div class="d-flex justify-content-center ">
-                    <div class="alert-primary p-4 mb-4 ">
+                    <div class="alert-primary p-2 mt-4 mb-4 ">
                         <p>{{description }}</p>
                     </div>
                 </div>
                 {% endfor %}
-                <br> 
+                <br>
             </div>
 
-            <div class="col-sm-10 ">{% for figure in figureList %}
+            <div class="col-sm-9 ">{% for figure in figureList %}
                 <div class="d-flex justify-content-center ">
-                    <img src="{{ figure }} "">
+                    <img src="{{ figure }} " ">
             </div> {% endfor %}
         </div>
     </div>

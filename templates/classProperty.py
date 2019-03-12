@@ -1,3 +1,5 @@
+# Python 3 Object Oriented Programming Phillips 2010
+# pg 80 case study for real estate
 class Property:
     def __init__(self, square_feet='', beds='',
             baths='', **kwargs):
@@ -6,7 +8,7 @@ class Property:
         self.num_bedrooms = beds
         self.num_baths = baths
 
-    def display(self):
+    def display():
         print("PROPERTY DETAILS")
         print("================")
         print("square footage: {}".format(self.square_feet))
