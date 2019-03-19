@@ -11,7 +11,7 @@ dictItemIcon_init,
 randGen_itemIcon,
 randGen_itemTitle
 )
-
+# description from another file
 from descGenForClassItem import randGen_itemDesc
 
 
@@ -49,11 +49,17 @@ class Item:
         print("itemBasePrice     | $ {:,.0f}".format(self.itemBasePrice))
         print("itemID            | {}".format(self.itemID))
         print("priceIndexLabel   | {}".format(self.priceIndexLabel))
-        print("itemIconNo        | {}".format(self.itemIconNo))
+        print("itemIconNo        | {}".format(self.itemIconNo[-7:]))
         print("itemTitle         | {}".format(self.itemTitle))
         print("itemDesc          | {}".format(self.itemDesc))
         print()
+        return None
+    
+        
 
+# ============================================================
+# ============================================================
+# ============================================================
 
 # a = Item()
 # a.display()

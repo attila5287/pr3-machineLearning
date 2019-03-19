@@ -144,13 +144,18 @@ def randGen_itemIcon(itemType):
     """"RANDOMLY GENERATES ITEM ICON NO THAT WILL BE
     APPENDED TO BASE-URL. TAKES ITEM TYPE AS PARAMETER"""
     pass
-    baseURL = 'https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master'
+    # baseURL = 'https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master'
+    
+    baseURL = 'https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/housePhotos'
+    
     dictItemIcon = dictItemIcon_init()
     append2IconURL1 = dictItemIcon[itemType]
     append2IconURL1str = str(append2IconURL1)
-    append2IconURL2 = np.random.randint(1,6)
+    append2IconURL2 = np.random.randint(0, 10)
     append2IconURL_2str = str(append2IconURL2)
-    append_ext = '.png'
+    # append_ext = '.png' WITH THE NEW MODIFICATION-LIGHTER JPEG PREFERRED
+    append_ext = '.jpeg'
+
     return str(baseURL + append2IconURL1str + append2IconURL_2str + append_ext)
 
 
