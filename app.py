@@ -148,10 +148,10 @@ def testSession():
 # EX: dict_RowNo_ColumnNo ie. dict_1_1 etc
   list_of_twoDicts.append(dict_1_1)
   list_of_twoDicts.append(dict_2_1)
-  print(list_of_twoDicts)
+  # print(list_of_twoDicts)
   list_of_twoDictS.append(dict_1_2)
   list_of_twoDictS.append(dict_2_2)
-  print(list_of_twoDictS)
+  # print(list_of_twoDictS)
 
   return render_template('testSESSION.html', 
   itemList = list_generated_items, 

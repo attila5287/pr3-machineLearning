@@ -4,7 +4,7 @@
 
 <head>
     <title>
-        RegroPoly | Test Round Object
+        RegroPoly | Test: SESSION
     </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
     <style>
     p {
             font-family: monospace;
-            color: #fa811d;
+            color: #41cc35;
             font-weight: 500;
         }
         
@@ -42,7 +42,7 @@
         }
         
         div.container {
-            padding: 4px;
+            padding: 2px;
             border: 1.50px dashed #fa811d;
         }
         
@@ -66,23 +66,10 @@
         <div class="collapse navbar-collapse " id="collapsibleNavId ">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
                 <li class="nav-item active ">
-                    <a class="nav-link " href="# ">Home <span class="sr-only ">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="/data ">
-                        API / DATA 
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="https://github.com/attila5287/pr3-machineLearning ">
-                        GITHUB / CODE
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="https://github.com/attila5287/pr3-RegroPoly-assets-herokuAPP ">
-                         GITHUB / RESOURCES
-                    </a>
-                </li>
+                    <a class="nav-link " href="# ">Home <span class="sr-only ">(current)</span></a></li>
+                <li class="nav-item "><a class="nav-link " href="/data ">API / DATA </a></li>
+                <li class="nav-item "><a class="nav-link " href="https://github.com/attila5287/pr3-machineLearning ">GITHUB / CODE</a></li>
+                <li class="nav-item "><a class="nav-link " href="https://github.com/attila5287/pr3-RegroPoly-assets-herokuAPP ">GITHUB / RESOURCES</a></li>
             </ul>
             <form class="form-inline my-0 my-lg-0 mt-0 p-1 ">
                 <div class="btn btn-primary p-1 mb-0 " href="# " role="button ">
@@ -99,7 +86,7 @@
             <a class="nav-link disabled " href="# ">
                 <h5>
                     <i class="fa fa-battery " aria-hidden="true " style="color:rgb(255, 255, 255) "></i>
-                    <i> Full-Stack Web App | @attila5287</i>
+                    <i style="color:rgb(255, 255, 255) "> Full-Stack Web App | @attila5287</i>
                 </h5>
             </a>
 
@@ -120,7 +107,7 @@
                     <img src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/regroPoly_newLogo_Mx.png " class="img-responsive">
                 </div>
             </div>
-            <div class="col-sm-4 ">
+            <div class="col-md-4 ">
                 <div class="card text-white bg-success mb-3 ">
                     <div class="card-header ">Test Module Info: *** S E S S I O N ***</div>
                     <div class="card-body ">
@@ -136,12 +123,12 @@
     <!-- LOGO END -->
 
     <!-- ================== F I R S T =  C O L U M N ========================= -->
-    <div class="container ">
+    <div class="container">
         <div class="row ">
             <!-- ######## C A R D S : SUMMARY METHOD RETURNED LIST FOR ITER ########### -->
-            <div class="col-sm-6 ">
+            <div class="col-md-6 ">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-md-12">
                         {% for summaryDict in summary_column_first %}
                         <div class="card text-white bg-dark mb-2">
                             <div class="card-header mb-1">
@@ -149,17 +136,16 @@
                             </div>
                             <div class="card-body">
                                 <div class="progress">
+                                    <h3>{{ summaryDict.value_current }}
+                                    </h3>
                                     <div class="progress-bar bg-warning" role="progressbar" style="width: {{ summaryDict.value_current }}%" aria-valuenow="1" aria-valuemin="{{ summaryDict.value_min }}" aria-valuemax="{{ summaryDict.value_max }}"> {{ summaryDict.value_current }} </div>
                                 </div>
-                                <p class="card-text">
-                                    - r e g r e p o l y -
-                                </p>
                             </div>
                         </div>
                         {% endfor %}
                     </div>
                     <!-- ================== S E C O N D =  C O L U M N ========================= -->
-                    <div class="col-sm-6">
+                    <div class="col-md-12">
                         {% for summaryDict in summary_column_second %}
                         <div class="card text-white bg-dark mb-1 p-1">
                             <div class="card-header bg-warning m-0 p-0 text-dark">
@@ -170,7 +156,7 @@
                                     <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="{{ summaryDict.value_current}}" aria-valuemin="{{ summaryDict.value_min}}" aria-valuemax="{{ summaryDict.value_max}}">
                                     </div>
                                 </div>
-                                <i class="card-text.">
+                                <i class="card-text">
                                     {{ "${:,.0f}".format(summaryDict.value_min)}} | {{ "${:,.0f}".format(summaryDict.value_current)}} | {{ "${:,.0f}".format(summaryDict.value_max)}}
                                 </i>
                                 <p class="card-text mb-0">
@@ -183,84 +169,91 @@
                 </div>
             </div>
 
-            <div class="col-sm-3 ">
+            <div class="col-md-3 ">
                 <a class="btn btn-light btn-md m-8 " href="/test/session " role="button " style="border-color: orange; border-width: 4px; border-style: dashed">
                     <img class="img-thumbnail " src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/assets_PNG_256x256.png" alt=" "><br>
                     <p style="font-size: 26px">A$$3TS</p>
+                    <p style="font-family: Tahoma; font-size: 16px; margin:1px ">player-purchased assets</p>
+                    <p style="font-family: Tahoma; font-size: 16px; margin:1px ">Machine Learning predictions</p>
                 </a>
             </div>
-            <div class="col-sm-3">
-                <a class="btn btn-light btn-md m-8 " href="/test/session " role="button " style="border-color: orange; border-width: 4px; border-style: dashed">
-                    <img class="img " src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/roundIcon_256PNG.PNG" alt=" ">
-                    <p style="font-size: 28px"><br>ROUND++</p>
+            <div class="col-md-3 ">
+
+                <a class="btn btn-light btn-md m-8 " href="/test/session " role="button " style="border-color: orange; border-width: 4px; border-style: solid ">
+                    <img class="img-thumbnail " src="https://raw.githubusercontent.com/attila5287/pr3-RegroPoly-assets-herokuAPP/master/roundIcon_256PNG_handMade_resizedD.png " alt=" ">
+                    <p style="font-size: 28px ">ROUND++</p>
+                    <p style="font-family: Tahoma; font-size: 16px; margin:1px ">next round!</p>
+                    <p style="font-family: Tahoma; font-size: 16px; margin:1px ">make sure game updated</p>
                 </a>
             </div>
         </div>
-    </div><br>
-
-
+    </div>
     <div class="container ">
         <div class="row ">
             {% for item in itemList %}
             <div class="col-md-6 ">
-                <div class="card text-white bg-warning mb-1 ">
-                    <div class="card-header m-1 ">Round No: TEST-ROUND-ZERO
+                <div class="card text-white bg-dark mb-1 p-1">
+                    <div class="card-header ">
+                        <h5>
+                            <p style="color: ORANGE">{{ item.itemTitle }}</p>
+                        </h5>
                     </div>
-                    <div class="card-body ">
+                    <div class="card-body">
+                        <div class="row">
+                            A T T I L A BOOTSTRAP FORM FOR BUTTONS WILL COME HERE
+                            <BR>
+                            <p>
+                                - - - - - - - - - - - - - - - - - - - - - - - -
+                            </p>
+                            <p>
+                                - - - - - - - - - - - - - - - - - - - - - - - -
+                            </p>
+                        </div><br>
                         <div class="row ">
-                            <div class="alert alert-warning ">
-                                <h4>{{ item.itemTitle }} </h4>
-                            </div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-sm-7 ">
-                                <div class="alert alert-dark p-1" role="alert ">
-                                    <div class="btn btn-warning mb-1 p-1 " role="button ">
-                                        <h3><i>{{ "buy for ${:,.0f} ".format(item.itemBasePrice) }}
-                                            </i>
-                                        </h3>
+                            <div class="col-sm-7">
+                                <img src='{{item.itemIconNo}}' class="img-thumbnail " style="border-color: #ff8800d3; border-width: 8px;  " alt="Responsive image " size="max-width:25% ">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="alert alert-warning p-1 m-2 " role="alert ">
+                                            <!-- BUTTON WITH BUY FUNCTION -->
+                                            buy this item for
+                                            <button type="button" class="btn btn-warning btn-lg btn-block" style="border-color: #13a34f ; border-width: 4px">                                                    <p style="color: #026412; font-size: 20px">{{ "${:,.0f}".format(item.itemBasePrice) }}
+                                            </p></button>
+                                        </div>
                                     </div>
                                 </div>
-                                <img src='{{item.itemIconNo}}' class="img-thumbnail " alt="Responsive image " size="max-width:25% ">
                             </div>
                             <div class="col-sm-5 ">
                                 <ul class="list-group ">
-                                    <li style="type:none"><i>ItemState</i></li>
-                                    <li class="list-group-item list-group-item-light ">
+                                    <li style="type:none "><i>ItemState</i></li>
+                                    <li class="list-group-item list-group-item-light p-2 ">
                                         {{item.itemState}}
                                     </li>
                                     <li><i>ItemType</i></li>
-                                    <li class="list-group-item list-group-item-warning ">
+                                    <li class="list-group-item list-group-item-warning p-2 ">
                                         {{item.itemType}}
                                     </li>
                                     <li><i>ItemID</i></li>
-                                    <li class="list-group-item list-group-item-light ">
+                                    <li class="list-group-item list-group-item-light p-2 ">
                                         {{item.itemID}}
                                     </li>
                                     <li><i>itemPriceLabel</i></li>
-                                    <li class="list-group-item list-group-item-warning ">
+                                    <li class="list-group-item list-group-item-warning p-2 ">
                                         {{item.priceIndexLabel}}
                                     </li>
                                     <li><i>itemBasePrice</i></li>
-                                    <li class="list-group-item list-group-item-light ">
+                                    <li class="list-group-item list-group-item-light p-2 ">
                                         {{ "${:,.0f} ".format(item.itemBasePrice) }}
                                     </li>
-                                    <!-- <li class="list-group-item list-group-item-info "></li> -->
                                 </ul>
                             </div>
                         </div><br>
                         <div class="row ">
-                            <li><i> itemTitle: </i>
-                                <div class="alert alert-primary ">
-                                    <h4>{{ item.itemTitle }} </h4>
+                            <div class="col xs-12">
+                                <div class="alert alert-secondary p-1">
+                                    <p style="font-size: 16px ; font-family:cursive ; color:rgb(23, 126, 47) ">{{ item.itemDesc }} </p>
                                 </div>
-                            </li>
-                            <li>
-                                <i>itemDesc: </i><br>
-                                <i class="p-2 mb-0 " style="font-size: 16px ">
-                                        {{ item.itemDesc}}
-                                    </i>
-                            </li>
+                            </div>
                         </div>
                         <br>
                     </div><br>
@@ -270,11 +263,22 @@
         </div>
     </div>
     <br>
+    <div class="container my-5">
+        <h1>Mailing List</h1>
+        <div class="form-group">
+            <input class="form-control" placeholder="Your email address">
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-2">
+                <button class="btn btn-primary btn-block">Sign up</button>
+            </div>
+        </div>
+    </div>
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>7
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>

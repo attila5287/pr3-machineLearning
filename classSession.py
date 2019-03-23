@@ -108,20 +108,24 @@ class SessionGame():
 #%%
 
 # ================= SESSION-END =================
-testSesh = SessionGame()
+# testSesh = SessionGame()
 # ------------------------
-list_summaryRound = testSesh.summary_round()
-print(list_summaryRound)
+# list_summaryRound = testSesh.summary_round()
+# print(list_summaryRound)
 # ------------------------
-list_summaryFunds = testSesh.summary_funds()
-print(list_summaryFunds)
+# list_summaryFunds = testSesh.summary_funds()
+# print(list_summaryFunds)
 # ------------------------
-list_summaryAssets = testSesh.summary_assets()
-print(list_summaryAssets)
+# list_summaryAssets = testSesh.summary_assets()
+# print(list_summaryAssets)
 # ------------------------
-list_summaryScore = testSesh.summary_score()
-print(list_summaryScore)
+# list_summaryScore = testSesh.summary_score()
+# print(list_summaryScore)
 # ------------------------
 
 
 #%%
+
+
+#%%
+ 
